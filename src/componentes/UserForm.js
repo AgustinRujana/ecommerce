@@ -8,6 +8,7 @@ const UserForm = () => {
 
   const handleSubmit = (event) =>{
     event.preventDefault();
+    
     const userName = event.target[0].value;
     const userSurname = event.target[1].value;
     const Email_1 = event.target[2].value;
