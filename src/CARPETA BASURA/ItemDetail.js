@@ -3,8 +3,7 @@ import ItemCount from "../componentes/subcomponents/ItemCount";
 import { CartContext } from ".././componentes/context/CartContext";
 
 const ItemDetail = ({ item }) => {
-  const [cartItems, setCartItem] = useContext(CartContext);
-  console.log(item)
+  const [cartItems, setCartItem] = useContext(CartContext)
   
   const onAdd = (amount) => {
     const sameId = cartItems.some((e) => e.Item.id === item.id);

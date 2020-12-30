@@ -19,8 +19,8 @@ import "./App.css";
 
 function App() {
   return (
-    <UserProvider>
     <CartProvider>
+      <UserProvider>
       <BrowserRouter>
         <NavBar/>
         <Switch>
@@ -30,14 +30,6 @@ function App() {
           <Route exact path="/cart">
             <CartDetail/>
           </Route>
-          
-          {/* //Anterior
-          <Route exact path="/items/:categoryId">
-            <ItemsCatalogue/>
-          </Route>
-          <Route exact path="/items/:categoryId/:id">
-            <ItemDetailContainer/>
-          </Route> */}
 
           //Final
           <Route exact path="/categories/:categoryId">
@@ -52,8 +44,8 @@ function App() {
         </Switch>
        <Footer/>  
       </BrowserRouter>
-    </CartProvider>
     </UserProvider>
+    </CartProvider>
   );
 }
 

@@ -12,7 +12,7 @@ import "firebase/firestore";
 
 function CartDetail() {
   const [cartItems] = useContext(CartContext);
-  const [User] = useContext(UserContext);
+  const [user] = useContext(UserContext);
 
   const CloseTransaction = () => {
 
@@ -29,7 +29,7 @@ function CartDetail() {
     });
 
     const FinishOrder = {
-      buyer: User,
+      buyer: user,
       items: cartItems,
       date: firebase.firestore.Timestamp.fromDate(new Date()),
       total: SumTotal,
