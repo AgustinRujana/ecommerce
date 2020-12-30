@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getFirestore } from "../firebase";
+import ItemImage from "./subcomponents/ItemImage";
 
 const ItemList = () => {
   const [items, setItems] = useState();
   const { categoryId } = useParams();
 
+  // Retrieve data from Firebase and saving in in State
   useEffect(() => {
     const db = getFirestore();
     const itemCollection = db.collection("Productos"); //Nombre de la DataBase
@@ -28,6 +30,7 @@ const ItemList = () => {
     }
   }, [categoryId]);
 
+  //Conditional Render
   const ReturnItems = () => {
     if (!items) {
       return <p className="text-center">Cargando...</p>;
@@ -40,6 +43,7 @@ const ItemList = () => {
             <p>
               <b>${e.price}</b>
             </p>
+            <ItemImage item={e}/>
           </div>
         </Link>
       );
