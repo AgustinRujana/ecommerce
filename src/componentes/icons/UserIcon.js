@@ -1,4 +1,4 @@
-import UserI from './img/User-2.0_Black.svg';
+import UserI from './img/User-2.0_White.svg';
 
 const UserIcon = () =>{
     return (

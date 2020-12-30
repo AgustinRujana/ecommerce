@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getFirestore } from "../firebase";
+import {Row, Container} from 'react-bootstrap';
+
+import ItemDetailBox from './ItemDetailBox'
+import ItemDetailContainer from "./ItemDetailContainer";
 import ItemImage from "./subcomponents/ItemImage";
 
 const ItemList = () => {
@@ -36,16 +40,8 @@ const ItemList = () => {
       return <p className="text-center">Cargando...</p>;
     }
     const list = items.map((e) => {
-      return (
-        <Link to={`/item/${e.id}`}> 
-          <div key={e.id} className="row justify-content-center">
-            <p>{e.title}</p>
-            <p>
-              <b>${e.price}</b>
-            </p>
-            <ItemImage item={e}/>
-          </div>
-        </Link>
+      return (        
+          <ItemDetailBox item={e}/>
       );
     });
     return list;
@@ -53,9 +49,11 @@ const ItemList = () => {
 
   //Salida de ItemList
   return (
-    <div>
+    <Container lg className='ItemList'>
+      <Row className='justify-content-center'>
       <ReturnItems />
-    </div>
+      </Row>
+    </Container>
   );
 };
 

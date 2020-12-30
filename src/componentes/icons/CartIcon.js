@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import {CartContext} from '../context/CartContext.js';
-import CartIco from './img/CartIcon-Bag_Black.svg';
+import CartIco from './img/CartIcon-Bag_White.svg';
 
 const CartIcon = () => {
   const [cartItems] = useContext(CartContext);
@@ -15,7 +15,7 @@ const CartIcon = () => {
     return (
       <div>
       <img className="ml-auto mr-5" height="75px" src={CartIco} alt="Carrito" />
-      <div className="">{getQuantity()}</div>
+      <div className="CartIndicator">{getQuantity()}</div>
       </div>
     )
   }

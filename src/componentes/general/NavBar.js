@@ -15,7 +15,7 @@ import UserIcon from "../icons/UserIcon";
 const NavBar = () => {
   return (
     <>
-      <Navbar bg="dark" expand="lg">
+      <Navbar bg="custom" expand="lg" className="NavbarFooter">
         <Navbar.Brand>
           <Link to={"/"}> <LogoIcon /> </Link>
         </Navbar.Brand>
@@ -28,7 +28,7 @@ const NavBar = () => {
           </Nav>
         </Navbar.Collapse>
         <Link className="ml-5" to={"/user"}> <UserIcon /> </Link>
-        <Link className="ml-2" to={"/cart"}> <CartIcon /> </Link>
+        <Link className="ml-2" style={{ textDecoration: 'none' }} to={"/cart"}> <CartIcon /> </Link>
       </Navbar>
     </>
   );

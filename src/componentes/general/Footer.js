@@ -18,7 +18,7 @@ const Footer = () => {
          <SocialMediaIcons/>
         </Col>
      </Row>
-     <Row className='Row-LowerFooter'>
+     <Row className='Row-LowerFooter NavbarFooter'>
         <Col xs lg='8'>
             <p>Categorias de la Tienda</p>
             <FooterCategoryList/>
