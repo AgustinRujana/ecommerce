@@ -19,7 +19,7 @@ const ItemList = () => {
     if (categoryId === "todos"){
       itemCollection.get().then((response) => {
         const aux = response.docs.map((e) => {
-          return e.data();
+          return {...e.data(), id:e.id};
         });
         setItems(aux);
       });

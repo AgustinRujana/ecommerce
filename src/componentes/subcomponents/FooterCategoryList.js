@@ -30,12 +30,6 @@ const FooterCategoryList = () => {
         </Media.Body>
     </Media>
     <Media>
-        <img width={32} height={32} className="mr-3" src={FlourIcon} alt="Generic placeholder"/>
-        <Media.Body>
-            <Link to={`/categories/Almacen`}><p className='mt-1'>Almacen</p></Link>
-        </Media.Body>
-    </Media>
-    <Media>
         <img width={32} height={32} className="mr-3" src={SeedsIcon} alt="Generic placeholder"/>
         <Media.Body>
             <Link to={`/categories/Semillas`}><p className='mt-1'>Semillas</p></Link>
