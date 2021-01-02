@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 
 //Context
 import { UserContext } from "./context/UserContext";
-import { CartContext } from "./context/CartContext";
 
 const UserForm = () => {
   const [user, setUser] = useContext(UserContext);
-  const [cartItems] = useContext(CartContext);
 
   //Submit Handler
   const handleSubmit = (event) =>{
@@ -33,7 +31,6 @@ const UserForm = () => {
 
     (Email_1 === Email_2) ? saveUser() : alert('Los mails no son iguales');
   }
- 
 
   //Renders the form
   return (
