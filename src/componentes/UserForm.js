@@ -1,11 +1,16 @@
 import React, { useContext } from "react";
 import { Form, Button, Col } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
+//Context
 import { UserContext } from "./context/UserContext";
+import { CartContext } from "./context/CartContext";
 
 const UserForm = () => {
-  const [setUser] = useContext(UserContext);
+  const [user, setUser] = useContext(UserContext);
+  const [cartItems] = useContext(CartContext);
 
+  //Submit Handler
   const handleSubmit = (event) =>{
     event.preventDefault();
     
@@ -26,12 +31,14 @@ const UserForm = () => {
       setUser(buyer);
     }
 
-    Email_1 === Email_2 ? saveUser() : alert('Los mails no son iguales');
+    (Email_1 === Email_2) ? saveUser() : alert('Los mails no son iguales');
   }
+ 
 
+  //Renders the form
   return (
     <>
-      <Form className="mx-5 my-3" onSubmit={handleSubmit}>
+      <Form className="mx-5 my-3" onSubmit={handleSubmit} className='UserForm'>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridNombre">
             <Form.Label>Nombre</Form.Label>
@@ -58,10 +65,8 @@ const UserForm = () => {
           <Form.Label>Numero de Contacto</Form.Label>
           <Form.Control placeholder="Numero de Contacto" />
         </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Guardar Usuario
-        </Button>
+        <Button variant="success" type="submit" className='mr-1'>Guardar Usuario</Button>
+        <Link to={`/cart`}><Button variant="success" type="submit">Volver al Carrito</Button></Link>
       </Form>
     </>
   );

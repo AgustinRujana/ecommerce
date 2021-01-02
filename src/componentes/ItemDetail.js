@@ -3,11 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import {Link} from 'react-router-dom';
 
 //Context
-import { CartContext } from ".././componentes/context/CartContext";
+import { CartContext } from "./context/CartContext";
 
 //Components
-import ItemCount from "../componentes/subcomponents/ItemCount";
-import ItemImage from "../componentes/subcomponents/ItemImage";
+import ItemCount from "./subcomponents/ItemCount";
+import ItemImage from "./subcomponents/ItemImage";
 
 const ItemDetail = ({ item }) => {
   const [cartItems, setCartItem] = useContext(CartContext);
@@ -55,7 +55,8 @@ const ItemDetail = ({ item }) => {
       </Row>
       <Row className="justify-content-md-center">
         <Col md='auto' className='mt-2'>
-          <Link className='FooterLink' to={`/categories/${item.categoryId}`}>Volver a {item.categoryId}.</Link>
+          <Link className='FooterLink mr-5' to={`/categories/${item.categoryId}`}>Volver a {item.categoryId}.</Link>
+          <Link className='FooterLink' to={`/categories/todos`}>Volver a todos.</Link>
         </Col>
       </Row>
     </Container>

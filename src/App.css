@@ -59,7 +59,12 @@
 }
 
 .Link_Home{
+  text-decoration: none;
+  color: white;
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: block;
 }
 
 .Row_ItemDetail{
@@ -79,7 +84,42 @@
   background-size: 80%;
 }
 
+.Row_CartItemDetail-Heading{
+  border-top-left-radius: 5px;
+  background-color: #79d70f;
+}
 
+.Row_CartItemDetail-Foot{
+  background-color: #79d70f;
+  text-align: end;
+}
+
+.Row_CartItemDetail-Foot-Tot{
+  border-bottom-left-radius: 30px;
+}
+
+.Row_CartItemDetail-Foot-Btn{
+  border-bottom-right-radius: 5px;
+}
+
+.Row_CartItemDetail{
+  background-color: white;
+}
+
+
+.Row_CartDetail-Side{
+  border-top-right-radius: 30px;
+  background-color: white;
+  background-image: url('./componentes/icons/img/BackgroundPattern.png');
+  background-size: 80%;
+}
+
+.UserForm{
+  background-color: white;
+  margin: 5%;
+  padding: 2%;
+  border-radius: 50px 5px 50px 5px;
+}
 /* /////////////////////////////////// */
 .App {
   text-align: center;
