@@ -23,7 +23,7 @@ const Footer = () => {
             <p>Categorias de la Tienda</p>
             <FooterCategoryList/>
         </Col>
-        <Col xs>
+        <Col xs className='mt-auto ml-auto'>
             <LogoIcon/>
             <p>Diseñado y Desarollado por: Agustin Rujana</p>
         </Col>

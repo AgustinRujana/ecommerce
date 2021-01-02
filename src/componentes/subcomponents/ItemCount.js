@@ -1,13 +1,11 @@
 import React, {useState} from 'react';
-// import { CartContext } from '../context/CartContext';
+import {Row, Button} from 'react-bootstrap';
 
-const ItemCount = ({initial, min, max, onAdd}) =>{
+const ItemCount = ({itemCategory,initial, max, onAdd}) =>{
     const [count, setCount] = useState(parseInt(initial))
-    // const Buy = () => {
-    //     //Algo pa comprar//
-    // }
+    
     const decrement = () => {
-        if (count !== min){
+        if (count !== 1){
             setCount(count - 1);
         }      
         
@@ -17,15 +15,25 @@ const ItemCount = ({initial, min, max, onAdd}) =>{
             setCount(count + 1);
         }     
     } 
+
+    const addaptedCount = (count, itemCategory) => {
+        switch(itemCategory){
+            case 'aceites':
+                return String(count*100) + ' ml';
+            case 'semillas':
+                return String(count*100) + ' gr';
+            default:
+                return String(count) + ' U.';  
+        }
+    }
  
     return(
-    <div className="row justify-content-center">
-        <h1>{count}</h1><br/>
-        <button type="button" className="btn btn-dark mx-1" onClick={decrement}>-</button>
-        <button type="button" className="btn btn-dark mx-1" onClick={increment}>+</button>
-        <button type="button" className="btn btn-dark mx-1" onClick={() => onAdd(count)}>Agregar al Carrito</button>
-        {/* <button type="button" className="btn btn-dark mx-1" onClick={Buy}>Comprar {count} </button> */}
-    </div>
+    <Row className='ml-5 mr-1 mb-3'>
+        <Button variant="outline-success" onClick={ decrement }>-</Button>
+        <p className='ItemDetailCounter mx-1 my-auto'>{addaptedCount(count, itemCategory)}</p>
+        <Button variant="outline-success" onClick={ increment } >+</Button>
+        <Button variant="outline-warning ml-1" onClick={ () => onAdd(count) }>Agregar al Carrito</Button>
+    </Row>
     )
 }
 

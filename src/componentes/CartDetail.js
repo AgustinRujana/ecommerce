@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import {Row, Container, Col} from 'react-bootstrap';
 
 //Context
 import { CartContext } from "./context/CartContext";
@@ -41,6 +42,22 @@ function CartDetail() {
       alert(id);
     });
   };
+
+  if (cartItems.length === 0){
+    return(
+      <Container>
+        <Row className='justify-content-md-center'>
+          <Col md='auto'>
+          <p>Todavia no tienes productos en tu carrito.</p>
+          <img/>
+          <Link className='FooterLink Link_Home' to={"/"}>Volver al Home</Link>
+          </Col>
+        </Row>
+      </Container>
+    )
+  } else {
+
+  }
 
   return (
     <div>

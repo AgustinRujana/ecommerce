@@ -53,6 +53,32 @@
 
 }
 
+.FooterLink{
+  text-decoration: none;
+  color: white;
+}
+
+.Link_Home{
+  text-align: center;
+}
+
+.Row_ItemDetail{
+  background-color: white;
+}
+
+.Row_ItemDetail-R{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 30px;
+}
+
+.Row_ItemDetail-Side{
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 5px;
+  background-color: white;
+  background-image: url('./componentes/icons/img/BackgroundPattern.png');
+  background-size: 80%;
+}
+
 
 /* /////////////////////////////////// */
 .App {

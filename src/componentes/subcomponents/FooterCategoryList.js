@@ -14,25 +14,25 @@ const FooterCategoryList = () => {
     <Media>
         <img width={32} height={32} className="mr-3" src={CarrotIcon} alt="Generic placeholder"/>
         <Media.Body>
-            <Link to={`/categories/Frutas`}><p className='mt-1'>Frutas</p></Link>
+            <Link to={`/categories/Frutas`}><p className='mt-1 FooterLink'>Frutas</p></Link>
         </Media.Body>
     </Media>
     <Media>
         <img width={32} height={32} className="mr-3" src={RadishIcon} alt="Generic placeholder"/>
         <Media.Body>
-            <Link to={`/categories/Verduras`}><p className='mt-1'>Verduras</p></Link>
+            <Link to={`/categories/Verduras`}><p className='mt-1 FooterLink'>Verduras</p></Link>
         </Media.Body>
     </Media>
     <Media>
         <img width={32} height={32} className="mr-3" src={OilIcon} alt="Generic placeholder"/>
         <Media.Body>
-            <Link to={`/categories/Aceites`}><p className='mt-1'>Aceites</p></Link>
+            <Link to={`/categories/Aceites`}><p className='mt-1 FooterLink'>Aceites</p></Link>
         </Media.Body>
     </Media>
     <Media>
         <img width={32} height={32} className="mr-3" src={SeedsIcon} alt="Generic placeholder"/>
         <Media.Body>
-            <Link to={`/categories/Semillas`}><p className='mt-1'>Semillas</p></Link>
+            <Link to={`/categories/Semillas`}><p className='mt-1 FooterLink'>Semillas</p></Link>
         </Media.Body>
     </Media>
     </>
