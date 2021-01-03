@@ -6,6 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 const Categories = () => {
   const [categories, setCategories] = useState();
 
+  //Get Categories from Firebase and save it on state
   useEffect(() => {
     const db = getFirestore();
     const CategoriasCollection = db.collection("Categorias");
@@ -17,7 +18,8 @@ const Categories = () => {
       setCategories(aux);
     });
   }, []);
-
+  
+  //Renders the Categories saved on state
   const ReturnCategories = () => {
     if (!categories) {
       return <NavDropdown.Item>Cargando...</NavDropdown.Item>
@@ -30,6 +32,7 @@ const Categories = () => {
     return list;
   };
 
+  //Renders the component
   return (
       <ReturnCategories/>
   );

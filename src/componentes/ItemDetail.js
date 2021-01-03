@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {Link} from 'react-router-dom';
 
@@ -9,7 +9,7 @@ import { CartContext } from "./context/CartContext";
 import ItemCount from "./subcomponents/ItemCount";
 import ItemImage from "./subcomponents/ItemImage";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ( {item} ) => {
   const [cartItems, setCartItem] = useContext(CartContext);
 
   //Cart logic and operations
@@ -17,18 +17,22 @@ const ItemDetail = ({ item }) => {
     const sameId = cartItems.some((e) => e.Item.id === item.id);
     const newOrder = { Quantity: amount, Item: item };
 
+    //Checks if item about to be add is already on the cart
     if (sameId) {
       cartItems.forEach((ele) => {
+        //If so update the array
         if (ele.Item.id === item.id) {
           const newCartItems = cartItems.filter((e) => e.Item.id !== item.id);
           setCartItem([...newCartItems, newOrder]);
         }
       });
     } else {
+      //If not push the order in the existing array
       setCartItem([...cartItems, newOrder]);
     }
   };
-
+  
+  //Selecting the unit type of the product
   const unitType = (itemCategory) => {
     switch(itemCategory){
         case 'aceites':
@@ -38,10 +42,10 @@ const ItemDetail = ({ item }) => {
         default:
             return 'Unidad';  
     }
-}
+  }
 
-  //Render de Item Detail
-  return (
+  //Render the component
+  return <>
     <Container className="my-5">
       <Row className="justify-content-md-center">
         <Col md='1' xs='0' lg='1' className='Row_ItemDetail-Side'></Col>
@@ -60,28 +64,6 @@ const ItemDetail = ({ item }) => {
         </Col>
       </Row>
     </Container>
-
-    // <Container fluid="lg">
-    //   <Row>
-    //     <Col xs='3' >
-    //       <ItemImage item={item}/>
-    //     </Col>
-    //     <Col xs='9'>
-    //       <ItemCount itemCategory={item.categoryId} initial="1" max={item.stock} onAdd={onAdd} />
-    //     </Col>
-    //   </Row>
-    // </Container>
-    // <div className="mt-5 row justify-content-center">
-    //   <div>
-    //     <p>{item.title}</p>
-    //     <p>{item.size}</p>
-    //     <p>
-    //       <b>${item.price}</b>
-    //     </p>
-    //     <ItemImage item={item}/>
-    //   </div>
-    //   <ItemCount itemCategory={item.categoryId} initial="1" max={item.stock} onAdd={onAdd} />
-    // </div>
-  );
+  </>
 };
 export default ItemDetail;

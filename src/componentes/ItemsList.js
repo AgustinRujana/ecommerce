@@ -13,8 +13,9 @@ const ItemList = () => {
   // Retrieve data from Firebase and saving in in State
   useEffect(() => {
     const db = getFirestore();
-    const itemCollection = db.collection("Productos"); //Nombre de la DataBase
+    const itemCollection = db.collection("Productos");
 
+    //Saves on state the items that match the Category requested
     if (categoryId === "todos"){
       itemCollection.get().then((response) => {
         const aux = response.docs.map((e) => {
@@ -46,7 +47,7 @@ const ItemList = () => {
     return list;
   };
 
-  //Salida de ItemList
+  //Renders Component
   return (
     <Container lg className='ItemList'>
       <Row className='justify-content-center'>

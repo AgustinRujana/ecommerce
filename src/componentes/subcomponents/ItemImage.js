@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import firebase from 'firebase';
 
-const ItemImage = ({item}) => {
-    const [source, setImgSource] = useState();
+const ItemImage = ( {item} ) => {
+  const [source, setImgSource] = useState();
 
-    //Retrieve Images from firebase
+  //Retrieve Images from firebase
   useEffect(() => {
     const storage = firebase.storage();
     const pathReference = storage.ref(item.image)
@@ -14,7 +14,8 @@ const ItemImage = ({item}) => {
     })
   }, [item]);
 
-  const ItemAlt = "Imagen de " + item.title
+  //This is just for SEO purposes
+  const ItemAlt = "Imagen de " + item.title;
 
   return <>
   <img className="mx-auto" height="95px" src={source} alt={ItemAlt}/>

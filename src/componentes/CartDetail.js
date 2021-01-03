@@ -22,22 +22,18 @@ function CartDetail() {
   //Checks for items on cart
   if (cartItems.length === 0) {
 
-    //If empty renders:
-    return (
+    //If cart is empty renders:
+    return <>
       <Container className="my-3">
         <Row className="justify-content-md-center">
           <Col md="auto">
-            <p className="Link_Home">
-              Todavia no tienes productos en tu carrito.
-            </p>
+            <p className="Link_Home"> Todavia no tienes productos en tu carrito.</p>
             <img src={EmptyCartImg} className="" alt="Imagen Carrito Vacio" />
-            <Link className="Link_Home" to={"/"}>
-              Volver al Home
-            </Link>
+            <Link className="Link_Home" to={"/"}> Volver al Home </Link>
           </Col>
         </Row>
       </Container>
-    );
+    </>
   } else {
     
     //If items are detected, trigger this:
@@ -45,10 +41,12 @@ function CartDetail() {
     cartItems.forEach((e) => { SumTotal = SumTotal + e.Quantity * e.Item.price; });
 
     //Then checks if the user is already register
-    const UserCheck_Btn = () =>{
+    const userCheck_Btn = () =>{
       if (user.length !== 0){
+        //If registered
         return <Button className="my-1" variant="warning" onClick={CloseTransaction}> Salir y Pagar</Button>
       } else {
+        //If not send to /user
         return <Link to={`/user`}><Button className="my-1" variant="warning">Cargar Usuario</Button></Link>
       }
     }
@@ -96,6 +94,7 @@ function CartDetail() {
       return list;
     };
 
+    //Renders the Component
     return <>
       <Container className="my-5">
         <Row className="justify-content-md-center">
@@ -124,7 +123,7 @@ function CartDetail() {
             </Row>
           </Col>
           <Col md="3" className="Row_CartItemDetail-Foot Row_CartItemDetail-Foot-Btn">
-            <UserCheck_Btn/>
+            <userCheck_Btn/>
           </Col>
         </Row>
       </Container>

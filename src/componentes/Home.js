@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { getFirestore } from "../firebase";
 
 //Components
@@ -41,6 +40,7 @@ const Home = () => {
     return list;
   };
 
+  //Renders the Component
   return <>
     <Container fluid >
       <Row className="justify-content-md-center my-3">

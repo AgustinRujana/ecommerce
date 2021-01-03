@@ -6,11 +6,10 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import Categories from "../subcomponents/Categories";
 import CartIcon from "../icons/CartIcon";
 import LogoIcon from "../icons/LogoIcon";
-import UserIcon from "../icons/UserIcon";
+import UserI from '../icons/img/User-2.0_White.svg';
 
 const NavBar = () => {
-  return (
-    <>
+  return <>
       <Navbar bg="custom" expand="lg" className="Navbar">
         <Navbar.Brand>
           <Link to={"/"}> <LogoIcon /> </Link>
@@ -20,10 +19,9 @@ const NavBar = () => {
             <Categories />
           </NavDropdown>
         </Nav>
-        <Link className="ml-5" to={"/user"}> <UserIcon /> </Link>
-        <Link className="ml-2" style={{ textDecoration: 'none' }} to={"/cart"}> <CartIcon /> </Link>
+        <Link className="ml-5" to={"/user"}><img className="" height="75px" src={UserI} alt="Icono Usuario" /></Link>
+        <Link className="ml-2 LinkFooter" to={"/cart"}> <CartIcon /> </Link>
       </Navbar>
     </>
-  );
 };
 export default NavBar;

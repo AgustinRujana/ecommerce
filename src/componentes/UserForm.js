@@ -32,7 +32,7 @@ const UserForm = () => {
     (Email_1 === Email_2) ? saveUser() : alert('Los mails no son iguales');
   }
 
-  //Renders the form
+  //Renders the compontent
   return (
     <>
       <Form className="mx-5 my-3" onSubmit={handleSubmit} className='UserForm'>

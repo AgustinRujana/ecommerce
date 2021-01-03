@@ -10,9 +10,6 @@ import SocialMediaIcons from '../icons/SocialMediaIcons';
 import FooterCategoryList from '../subcomponents/FooterCategoryList';
 import LogoIcon from '../icons/LogoIcon';
 
-
-
-
 const Footer = () => {
  return <>
  <Container fluid>

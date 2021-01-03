@@ -1,3 +1,4 @@
+//Images
 import Facebook from './img/Facebook.svg';
 import Instagram from './img/Instagram.svg';
 import Linkedin from './img/Linkedin.svg';
