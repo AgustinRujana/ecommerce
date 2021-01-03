@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 #root{
   background-color:#d32626;
@@ -6,7 +7,7 @@
 }
 
 .Row-SocialMediaIcons{
-  background-color:  #bbff6d;
+  background-color:  #468300;
   /* background-color: #f5a31a; */
   padding: 10px;
 }
@@ -17,8 +18,11 @@
   color: white;
 }
 
-.NavbarFooter{
-  background-color: #79d70f;
+.Navbar{
+  background-color:  #468300;
+}
+.Footer{
+  background-color: #63b900;
 }
 
 .ItemDetailBox{
@@ -86,11 +90,11 @@
 
 .Row_CartItemDetail-Heading{
   border-top-left-radius: 5px;
-  background-color: #79d70f;
+  background-color: #63b900;
 }
 
 .Row_CartItemDetail-Foot{
-  background-color: #79d70f;
+  background-color: #63b900;
   text-align: end;
 }
 
@@ -119,6 +123,20 @@
   margin: 5%;
   padding: 2%;
   border-radius: 50px 5px 50px 5px;
+}
+
+.navbar-nav .nav-link {
+  color: #f8f9fa !important;
+}
+
+.Recomendaciones{
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+}
+
+.ContainerItems_Home{
+  max-width: 1000px !important;
 }
 /* /////////////////////////////////// */
 .App {

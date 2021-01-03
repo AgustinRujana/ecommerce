@@ -1,7 +1,7 @@
-import Facebook from './img/Facebook.png';
-import Instagram from './img/Instagram.png';
-import Linkedin from './img/Linkedin.png';
-import Youtube from './img/Youtube.png';
+import Facebook from './img/Facebook.svg';
+import Instagram from './img/Instagram.svg';
+import Linkedin from './img/Linkedin.svg';
+import Youtube from './img/Youtube.svg';
 
 const SocialMediaIcons = () =>{
     return <>

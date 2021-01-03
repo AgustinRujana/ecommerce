@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getFirestore } from "../firebase";
 import {Row, Container} from 'react-bootstrap';
 
-import ItemDetailBox from './ItemDetailBox'
-import ItemDetailContainer from "./ItemDetailContainer";
-import ItemImage from "./subcomponents/ItemImage";
+//Components
+import ItemDetailBox from './ItemDetailBox';
 
 const ItemList = () => {
   const [items, setItems] = useState();

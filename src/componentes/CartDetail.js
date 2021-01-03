@@ -11,8 +11,9 @@ import { getFirestore } from "../firebase";
 import firebase from "firebase/app";
 import "firebase/firestore";
 
-//Components
+//Images
 import EmptyCartImg from "./icons/img/EmptyCart.png";
+import BottomBanner from "./icons/img/BottomBanner.jpg";
 
 function CartDetail() {
   const [cartItems] = useContext(CartContext);
@@ -95,7 +96,7 @@ function CartDetail() {
       return list;
     };
 
-    return (
+    return <>
       <Container className="my-5">
         <Row className="justify-content-md-center">
           <Col md="6">
@@ -127,7 +128,14 @@ function CartDetail() {
           </Col>
         </Row>
       </Container>
-    );
+      <Container fluid>
+      <Row className="justify-content-center">
+        <Col xs="auto">
+          <img className="img-fluid my-3" src={BottomBanner} alt="Bottom Banner"/>
+        </Col>
+      </Row>
+    </Container>
+  </>
   }
 }
 

@@ -17,7 +17,7 @@ const ItemImage = ({item}) => {
   const ItemAlt = "Imagen de " + item.title
 
   return <>
-  <img className="mr-2" height="100px" src={source} alt={ItemAlt}/>
+  <img className="mx-auto" height="95px" src={source} alt={ItemAlt}/>
   </>
 }
 
