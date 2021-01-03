@@ -27,6 +27,7 @@ const UserForm = () => {
 
       console.log(buyer);
       setUser(buyer);
+      alert('Se guardo el usuario con exito')
     }
 
     (Email_1 === Email_2) ? saveUser() : alert('Los mails no son iguales');

@@ -41,7 +41,7 @@ function CartDetail() {
     cartItems.forEach((e) => { SumTotal = SumTotal + e.Quantity * e.Item.price; });
 
     //Then checks if the user is already register
-    const userCheck_Btn = () =>{
+    const UserCheckBtn = () => {
       if (user.length !== 0){
         //If registered
         return <Button className="my-1" variant="warning" onClick={CloseTransaction}> Salir y Pagar</Button>
@@ -123,7 +123,7 @@ function CartDetail() {
             </Row>
           </Col>
           <Col md="3" className="Row_CartItemDetail-Foot Row_CartItemDetail-Foot-Btn">
-            <userCheck_Btn/>
+            <UserCheckBtn/>
           </Col>
         </Row>
       </Container>
