@@ -25,12 +25,11 @@ const UserForm = () => {
         email: Email_1,
       }
 
-      console.log(buyer);
       setUser(buyer);
       alert('Se guardo el usuario con exito')
     }
 
-    (Email_1 === Email_2) ? saveUser() : alert('Los mails no son iguales');
+    (Email_1 === Email_2) ? (Email_1 !== "") ? saveUser() : alert('Complete el Correo Electronico') : alert('Los mails no son iguales');
   }
 
   //Renders the compontent
